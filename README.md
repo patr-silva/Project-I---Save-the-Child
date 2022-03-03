@@ -14,28 +14,27 @@ Save The Child
 
 * Data structure
 
-    >> script.js
-    BabyYoda(){
+    * BabyYoda(){
         show()
     }
-    Enemies(){
+    * Enemies(){
         show()
         move()
         offscreen()
     }
-    Frogs(){
+    * Frogs(){
         show()
         move()
     }
-    createObstacles(){}
-    createfrogs(){}
-    collision(){}
-    avoidIntersection(){}
-    keyPressed(){}
-    setup(){}
-    draw(){}
-    startGame(){}
-    gameOver(){}
+    * createObstacles(){}
+    * createfrogs(){}
+    * collision(){}
+    * avoidIntersection(){}
+    * keyPressed(){}
+    * setup(){}
+    * draw(){}
+    * startGame(){}
+    * gameOver(){}
 
 * States y States Transitions
 
