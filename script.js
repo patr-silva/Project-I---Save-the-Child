@@ -22,16 +22,16 @@ let finalScoreSpan = document.querySelector("#final-score-value");
 
 //Sounds
 
-let scoreSound = new Audio('./Audio/mixkit-small-hit-in-a-game-2072 (1).wav');
-let collisionSound = new Audio('./Audio/Collision.mp3');
+let scoreSound = new Audio("Audio/mixkit-small-hit-in-a-game-2072 (1).wav");
+let collisionSound = new Audio("Audio/Collision.mp3");
 
 
 function preload() {
-  bg = loadImage("./IMAGES/2109.w023.n001.1040B.p1.1040.jpg");
-  yodaImg = loadImage("./IMAGES/BY3.png");
-  stormImg = loadImage("./IMAGES/Stormtrooper 2.png");
+  bg = loadImage("IMAGES/2109.w023.n001.1040B.p1.1040.jpg");
+  yodaImg = loadImage("IMAGES/BY3.png");
+  stormImg = loadImage("IMAGES/Stormtrooper 2.png");
   frogImg = loadImage(
-    "./IMAGES/—Pngtree—frog vector illustration design_4368100.png"
+    "IMAGES/—Pngtree—frog vector illustration design_4368100.png"
   );
 }
 
@@ -64,7 +64,7 @@ class Enemies {
 
   move() {
     this.x -= 5;
-    if(score >= 3){
+    if(score >= 10){
       this.x -= 7
     }
   }
@@ -89,7 +89,7 @@ class Frogs {
 
   move() {
     this.x -= 5;
-    if(score >= 3){
+    if(score >= 10){
       this.x -= 7
     }
   }
@@ -118,15 +118,14 @@ function creatFrogs() {
     frog.move();
     
     if (collision(yoda, frog)) {
+      scoreSound.play();
       score++;
       scoreSpan.innerText = score;
       frogArr.splice(frog, 1);
-      scoreSound.play();
+      
     }
   });
 }
-
-
 
 function collision(element1, element2) {
   if (
