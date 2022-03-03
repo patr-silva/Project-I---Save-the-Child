@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#initial-screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#first-background{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    position: absolute;
+}
+
+.start > h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 13vh;
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    position: relative;
+}
+
+.start > img  {
+    width: 15vw;
+    margin-bottom: 7vh;
+    align-self: center;
+    position: relative;
+}
+
+
+.start > button {
+  background-color: white;
+  border: none;
+  color: black;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 8vh;
+  font-weight: 650;
+  padding: 2vh 4vw;
+  align-self: center;
+}
+
+
+.start > p {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4vh;
+    color: white;
+    align-self: center;
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 7vh;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 15vh;
+    background-color: rgb(91, 192, 133);
+    z-index: -1;;
+}
+
+.game > p {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 7vh;
+    text-align: center;
+}
+
+canvas {
+    z-index: -1;
+    align-self: center;
+    margin-bottom: 20vh;
+}
+
+.final {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+.final > h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 15vh;
+    text-align: center;
+    color: azure;
+    position: relative;
+    margin-top: 3vh;
+    margin-bottom: 10vh;
+}
+
+.final > p {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 10vh;
+    text-align: center;
+    position: relative;
+}
+
+
+.final > button {
+    border: none;
+    color: black;
+    background-color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 8vh;
+    font-weight: 650;
+    padding: 2vh 4vw;
+    align-self: center;
+    margin-bottom: 6vh;
+}
+
+.final > img {
+    width: 100vw;
+    height: 110vh;
+    margin:auto;
+    object-fit: cover;
+    z-index: -1;
+    position: absolute;
+}
