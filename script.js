@@ -22,7 +22,7 @@ let finalScoreSpan = document.querySelector("#final-score-value");
 
 //Sounds
 
-let scoreSound = new Audio("Audio/mixkit-small-hit-in-a-game-2072 (1).wav");
+let scoreSound = new Audio("Audio/Audio_Score f.mp3");
 let collisionSound = new Audio("Audio/Collision.mp3");
 
 
@@ -64,8 +64,8 @@ class Enemies {
 
   move() {
     this.x -= 5;
-    if(score >= 10){
-      this.x -= 7
+    if(score >= 5){
+      this.x -= 6
     }
   }
 
@@ -89,9 +89,10 @@ class Frogs {
 
   move() {
     this.x -= 5;
-    if(score >= 10){
-      this.x -= 7
+    if(score >= 5){
+      this.x -= 6
     }
+    
   }
 }
 
@@ -150,7 +151,7 @@ function avoidIntersection() {
 
 function keyPressed(obj) {
   if (keyIsDown(ENTER)) {
-    obj.speedY = -5;
+    obj.speedY = -6;
     obj.y += obj.speedY;
     obj.speedY += obj.gravity;
   } else {
@@ -179,10 +180,10 @@ function draw() {
   background(bg);
   yoda.show();
   keyPressed(yoda);
-  if (frameCount % 372 === 0) {
+  if (frameCount % 376 === 0) {
     stormArr.push(new Enemies());
   }
-  if (frameCount % 275 === 0) {
+  if (frameCount % 225 === 0) {
     frogArr.push(new Frogs());
   }
   avoidIntersection();
